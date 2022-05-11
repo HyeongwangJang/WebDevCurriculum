@@ -5,3 +5,4 @@ Hello World!
 - push_2 두 번째 푸쉬
 - push_3 세 번째 푸쉬
 - push_1으로 reset 후, 변경 사항 추가
+- push_4 git stash 해놓고 푸쉬하기
