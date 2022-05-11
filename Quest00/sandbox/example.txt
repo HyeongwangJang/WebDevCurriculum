@@ -2,3 +2,6 @@ Hello World!
 
 # practice push
 - push_1 첫 번째 푸쉬
+- push_2 두 번째 푸쉬
+- push_3 세 번째 푸쉬
+- push_1으로 reset 후, 변경 사항 추가
