@@ -6,3 +6,7 @@ Hello World!
 - push_3 세 번째 푸쉬
 - push_1으로 reset 후, 변경 사항 추가
 - push_4 git stash 해놓고 푸쉬하기
+
+# git stash
+- stash_1 스테이징 될 임시 변경내용 만들기
+- stash_2 스테이징 안될 임시 변경내용 만들기
