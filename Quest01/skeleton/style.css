@@ -1,0 +1,374 @@
+/* common */
+body{
+    margin: 0; padding: 0;
+    color: #2d2d2d;
+    background: linear-gradient(
+        180deg,
+        rgba(255,255,255,1) 0%,
+        rgba(255,255,255,1) 0%,
+        rgba(241,241,254,1) 39%,
+        rgba(237,237,237,1) 100%
+    );
+}
+h1, h2, h3, h4, h5, h6, p, ul, li, a{
+    margin: 0; padding: 0;
+}
+a{
+    color: #2d2d2d; text-decoration: none;
+}
+
+ul{
+    margin: 0; padding: 0;
+    list-style: none;
+}
+
+.box{
+    padding: 16px; margin-bottom: 8px;
+    background-color: #fff;
+}
+
+.icon__weather{
+    display: flex; justify-content: center; align-items: center;
+    width: 36px; height: 36px;
+    font-size: 20px;
+    border: 1px solid #2d2d2d;
+}
+
+/* buttons */
+.button__weather{
+    padding: 4px 8px;
+    background-color: #dddddd;
+    border: none; border-radius: 4px;
+}
+.button__weather:hover{
+    background-color: #00a2ffcc;
+    color: #fff;
+    cursor: pointer;
+}
+
+.button_border{
+    padding: 4px 8px;
+    background-color: #fff;
+    border: 1px solid #648cc9;
+    color: #648cc9;
+}
+.button_border:hover{
+    background-color: #648cc9;
+    color: #fff;
+}
+
+/* icons */
+.icon__circle{
+    display: inline-flex; justify-content: center; align-items: center;
+    width: 24px; height: 24px;
+    border: 1px solid #2d2d2d; border-radius: 50%;
+}
+
+/* label */
+.label__green{
+    padding: 4px;
+    border: 1px solid #4ed844; border-radius: 12px;
+    font-size: 12px; color: #4ed844;
+}
+
+/* details */
+details summary{
+    display: flex; justify-content: space-between; align-items: center;
+}
+details summary::-webkit-details-marker {
+    display: none;
+}
+details summary::after{
+    content: "\f125";
+    font-family: "ionicons";
+    will-change: transform;
+    transition: transform 300ms ease;
+}
+details[open] summary::after{
+    transform: rotate(90deg);
+}
+
+
+/* header */
+header{
+    display: flex; justify-content: space-between; align-items: center;
+    position: sticky; top: 0;
+    height: 40px; padding: 12px; margin-bottom: 48px;
+    box-sizing: border-box;
+}
+header > .button__hamburger{
+    display: flex; flex-direction: column; justify-content: space-between;
+    width: 24px; height: 100%;
+}
+header > .button__hamburger:hover{
+    cursor: pointer;
+}
+header > .button__hamburger > span{
+    width: 100%; height: 2px;
+    background-color: #575454;
+}
+header > .quick_menu{
+    display: flex; align-items: center;
+}
+header > .quick_menu > a{
+    font-size: 12px;
+}
+header > .quick_menu > a.button__QR{
+    margin-right: 8px;
+}
+header > .quick_menu > a.button__NPay{
+    padding: 4px 12px; margin-right: 8px;
+    background-color: #c0c0c0;
+    border-radius: 12px;
+}
+header > .quick_menu > .button__printer{
+    padding: 4px;
+    background-color: #c0c0c0;
+    border-radius: 50%;
+}
+
+/* section.search */
+section.search{
+    display: flex; flex-direction: column; align-items: center;
+    width: 640px; margin: 0 auto 96px;
+}
+section.search > h1{
+    padding: 0; margin: 0;
+    font-size: 64px; color: #69cc69;
+}
+section.search > .form__search{
+    position: relative;
+    width: 100%;
+}
+section.search > .form__search > .input__search{
+    width: 100%; height: 48px; padding: 0px 102px 0px 12px;
+    border: 3px solid #69cc69;
+    box-sizing: border-box;
+}
+section.search > .form__search > .form_buttons{
+    display: flex;
+    position: absolute; top: 50%; right: 12px; transform: translateY(-50%);
+}
+section.search > .form__search > .form_buttons > .button__line_icon{
+    padding: 4px; margin-right: 4px;
+    font-size: 20px; color: #69cc69;
+    background-color: transparent;
+    border: none;
+}
+section.search > .form__search > .form_buttons > .button__line_icon:last-child{
+    margin-right: 0;
+}
+section.search > .form__search > .form_buttons > .button__line_icon:hover{
+    cursor: pointer;
+}
+
+section.search > .direct_buttons{
+    margin-top: 20px;
+}
+section.search > .direct_buttons div.button__direct{
+    margin-right: 40px;
+}
+section.search > .direct_buttons div.button__direct:hover{
+    cursor: pointer;
+}
+section.search > .direct_buttons a.direct_icon{
+    display: flex; justify-content: center; align-items: center;
+    width: 60px; height: 60px; padding: 8px;
+    background-color: #dddddd;
+    border-radius: 4px;
+    font-size: 24px;
+    box-sizing: border-box;
+}
+section.search > .direct_buttons div.button__direct:nth-child(4),
+section.search > .direct_buttons div.button__direct:nth-child(8){
+    margin-right: 0;
+}
+section.search > .direct_buttons > div.top{
+    display: flex;
+    margin-bottom: 8px;
+}
+section.search > .direct_buttons > div.bottom{
+    display: flex;
+}
+section.search > .direct_buttons > div > div{
+    display: flex; flex-direction: column; align-items: center;
+}
+section.search > .direct_buttons > div > div > span{
+    font-size: 12px;
+}
+
+/* section.main */
+section.main{
+    width: 600px; margin: 0 auto;
+}
+section.main > div.today{
+    display: flex;
+}
+section.main > div.today > div.weather{
+    display: flex; align-items: center;
+    width: 50%;
+}
+section.main > div.today > div.weather > div.weather_desc{
+    display: flex; flex-direction: column;
+    margin-left: 12px;
+}
+section.main > div.today > div.now{
+    display: flex; justify-content: end; align-items: center;
+    width: 50%;
+}
+section.main > div.today > div.now > a{
+    margin-right: 8px;
+}
+section.main > div.today > div.now a.channel{
+    display: flex; justify-content: center; align-items: center;
+    width: 40px; height: 40px;
+    border: 1px solid #2d2d2d; border-radius: 50%;
+}
+section.main > div.today > div.now > a:nth-child(1){
+    display: flex; flex-direction: column;
+    font-weight: bold;
+}
+section.main > div.today > div.now > a:nth-child(1) > span.now{
+    color: #ff0000;
+}
+section.main > div.today > div.now > a:last-child{
+    margin-right: 0;
+}
+
+/* 주간 날씨 토글 */
+section.main > details.weekly_weather > summary > div{
+    display: flex; align-items: center;
+}
+section.main > details.weekly_weather > summary > div > h2{
+    padding: 0; margin: 0 16px 0 0;
+    font-size: 20px; font-weight: bold;
+}
+section.main > details.weekly_weather > summary > div > p{
+    color: #c0c0c0;
+}
+section.main > details.weekly_weather > summary > div > p:last-child{
+    margin-left: 4px;
+    color: #008cff;
+}
+section.main > details.weekly_weather > div{
+    margin-top: 12px;
+}
+section.main > details.weekly_weather > div > .weather_type_buttons{
+    margin-bottom: 12px;
+}
+section.main > details.weekly_weather > div > .weathers{
+    display: flex; justify-content: space-between;
+}
+section.main > details.weekly_weather > div > .weathers > div{
+    display: flex; flex-direction: column; align-items: center;
+    width: calc(100% / 9); margin-right: 8px;
+}
+section.main > details.weekly_weather > div > .weathers > div:last-child{
+    margin-right: 0;
+}
+section.main > details.weekly_weather > div > .weathers > div > .mid_line{
+    width: 2px; height: 20px; margin: 4px 0;
+    background-color: #777777;
+}
+section.main > details.weekly_weather > div > .weathers > div > .icon__weather{
+    margin: 8px 0;
+}
+
+/* corona */
+section.main > div.corona{
+    display: flex;
+}
+section.main > div.corona > div{
+    display: flex; flex-direction: column; align-items: flex-start;
+    width: 50%;
+}
+section.main > div.corona > div.status{
+    padding-right: 16px;
+    border-right: 1px solid #2d2d2d;
+}
+section.main > div.corona > div.fact{
+    margin-left: 16px;
+}
+section.main > div.corona > div > span{
+    margin-bottom: 8px;
+}
+
+/* 이벤트: 대한민국 임시정부 수립일 */
+section.main > div.event{
+    text-align: center;
+}
+
+/* 애플리케이션 설치 광고 */
+section.main > div.app_install{
+    display: flex; justify-content: space-between;
+}
+section.main > div.app_install > div{
+    display: flex; align-items: center;
+}
+section.main > div.app_install > div > .install_desc{
+    margin-left: 8px;
+}
+
+/* 웹툰 토글 */
+section.main > details.webtoon > summary > h2{
+    padding: 0; margin: 0 16px 0 0;
+    font-size: 20px; font-weight: bold;
+}
+
+/* 인기 주제 판을 확인해 보세요! */
+section.main > div.hot_pans{
+    display: flex; flex-direction: column;
+}
+section.main > div.hot_pans > .title{
+    display: flex; justify-content: space-between;
+    margin-bottom: 8px;
+}
+section.main > div.hot_pans > .title > h2{
+    padding: 0; margin: 0 16px 0 0;
+    font-size: 20px; font-weight: bold;
+}
+section.main > div.hot_pans > .pans{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+section.main > div.hot_pans > .pans > .pan{
+    display: flex; justify-content: space-between;
+    padding: 12px;
+    background-color: #dddddd;
+    color: 20px;
+}
+section.main > div.hot_pans > .pans > .pan:hover{
+    cursor: pointer;
+}
+
+/* 공지 사항 */
+section.main > details.notice > summary > div > .label__green{
+    margin-right: 12px;
+}
+
+/* 푸터 */
+footer{
+    width: 600px; margin: 64px auto 64px;
+    text-align: center;
+}
+footer > div{
+    display: flex; flex-direction: column;
+}
+footer > div > ul{
+    display: flex; justify-content: center;
+    margin-bottom: 12px;
+}
+footer > div > ul > li{
+    margin: 0 8px;
+}
+footer > div > ul > li > a{
+    color: #adabab;
+}
+footer > div > ul > li > a.policy{
+    color: #2d2d2d;
+}
+footer > a{
+    font-size: 32px; color: #adabab;
+}

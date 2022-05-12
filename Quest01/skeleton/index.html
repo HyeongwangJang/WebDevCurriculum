@@ -1,250 +1,324 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<!-- TODO: 또 무엇이 필요할까요? -->
 
-        <!-- meta data: ex) og ... -->
-        <!-- style, font, cdn ... -->
-	</head>
-	<body>
-		<header>
-			<!-- TODO: 어디까지를 header로 보는 것이 좋을까요? -->
+<head>
+    <meta charset="UTF-8">
+    <!-- TODO: 또 무엇이 필요할까요? -->
 
-            <!-- 최상단 바 -->
-            <div>
-                <button>햄버거</button>
-                <div>
-                    <a href="#">QR 체크인</a>
-                    <a href="#">N pay</a>
-                    <a href="#">Icon</a>
+    <!-- meta data: ex) og ... -->
+    <!-- style, font, cdn ... -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.css" rel="stylesheet" type="text/css"/>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <!-- TODO: 어디까지를 header로 보는 것이 좋을까요? -->
+
+        <!-- 최상단 바 -->
+        <div class="button__hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="quick_menu">
+            <a href="#" class="button__QR">QR 체크인</a>
+            <a href="#" class="button__NPay">N pay</a>
+            <a href="#" class="button__printer">프</a>
+        </div>
+    </header>
+
+    <section class="search">
+        <!-- logo -->
+        <h1>NAVER</h1>
+    
+        <!-- 검색창 -->
+        <form class="form__search">
+            <input class="input__search" type="text" placeholder="검색어를 입력해주세요." />
+            <div class="form_buttons">
+                <button class="button__line_icon">마</button>
+                <button class="button__line_icon">카</button>
+                <button class="button__line_icon">돋</button>
+            </div>
+        </form>
+    
+        <!-- 바로가기 버튼들 -->
+        <div class="direct_buttons">
+            <div class="top">
+                <div class="button__direct">
+                    <a href="#" class="direct_icon">뉴</a>
+                    <span>뉴스판</span>
+                </div>
+                <div class="button__direct">
+                    <a href="#" class="direct_icon">경</a>
+                    <span>경제지표판</span>
+                </div>
+                <div class="button__direct">
+                    <a href="#" class="direct_icon">연</a>
+                    <span>연예판</span>
+                </div>
+                <div class="button__direct">
+                    <a href="#" class="direct_icon">트</a>
+                    <span>트렌드판</span>
                 </div>
             </div>
-
-            </header>
-            
-            <section class="main">
-                <!-- TODO: main은 어떤 식으로 나눌 수 있을까요? -->
-
-                 <!-- logo -->
-                 <h1>NAVER</h1>
-
-                 <!-- 검색창 -->
-                 <form>
-                    <input type="text" placeholder="검색어를 입력해주세요." />
-                    <button>마</button>
-                    <button>카</button>
-                    <button>돋</button>
-                 </form>
-
-                <!-- 바로가기 버튼들 -->
-                <div>
-                    <div>
-                        <a href="#">뉴스판</a>
-                        <a href="#">경제지표판</a>
-                        <a href="#">연예판</a>
-                        <a href="#">트렌드판</a>
-                    </div>
-                    <div>
-                        <a href="#">메일</a>
-                        <a href="#">카페</a>
-                        <a href="#">블로그</a>
-                        <a href="#">...</a>
-                    </div>
+            <div class="bottom">
+                <div class="button__direct">
+                    <a href="#" class="direct_icon">메</a>
+                    <span>메일</span>
                 </div>
-
-                <!-- 오늘 날씨 box -->
-                <div>
-                    <div>
-                        <p>I-달</p>
-                        <div>
-                            <p>10도 맑음</p>
-                            <p>어제보다 2도 높아요</p>
-                        </div>
-                    </div>
-                    <div>
-                        <a href="#">
-                            NOW.
-                            지금 방송중
-                        </a>
-                        <a href="#">원1</a>
-                        <a href="#">원2</a>
-                        <a href="#">원3</a>
-                    </div>
+                <div class="button__direct">
+                    <a href="#" class="direct_icon">카</a>
+                    <span>카페</span>
                 </div>
-
-                <!-- 토글: 주간 날씨 -->
-                <details>
-                    <summary>
-                        <h2>날씨</h2>
-                        <p>서울시 잠실동</p>
-                        <p>I-과녁</p>
-                    </summary>
-
-                    <div>
-                        <div>
-                            <button>시간대별 날씨</button>
-                            <button>시간대별 미세먼지</button>
-                            <button>주간 날씨</button>
-                            <button>주간 미세먼지</button>
-                        </div>
-                        <div>
-                            <div>
-                                <span>19도</span>
-                                <span></span>
-                                <span>8도</span>
-                                <span>I-해</span>
-                                <span>어제</span>
-                            </div>
-                            <div>
-                                <span>22도</span>
-                                <span></span>
-                                <span>7도</span>
-                                <span>I-해</span>
-                                <span>오늘</span>
-                            </div>
-                            <div>
-                                <span>17도</span>
-                                <span></span>
-                                <span>11도</span>
-                                <span>I-구름비</span>
-                                <span>월</span>
-                            </div>
-                            <div>
-                                <span>18도</span>
-                                <span></span>
-                                <span>12도</span>
-                                <span>I-구름비</span>
-                                <span>화</span>
-                            </div>
-                            <div>
-                                <span>17도</span>
-                                <span></span>
-                                <span>4도</span>
-                                <span>I-해</span>
-                                <span>수</span>
-                            </div>
-                            <div>
-                                <span>19도</span>
-                                <span></span>
-                                <span>4도</span>
-                                <span>I-해</span>
-                                <span>목</span>
-                            </div>
-                            <div>
-                                <span>19도</span>
-                                <span></span>
-                                <span>6도</span>
-                                <span>I-해</span>
-                                <span>금</span>
-                            </div>
-                            <div>
-                                <span>19도</span>
-                                <span></span>
-                                <span>8도</span>
-                                <span>I-해</span>
-                                <span>토</span>
-                            </div>
-                            <div>
-                                <span>18도</span>
-                                <span></span>
-                                <span>6도</span>
-                                <span>I-해</span>
-                                <span>일</span>
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
-                <!-- 코로나 -->
-                <div>
-                    <div>
-                        <span>I-코 코로나19</span>
-                        <span>국내외 확진 현황</span>
-                    </div>
-                    <div>
-                        <span>I-OX 코로나19 팩트체크</span>
-                        <span>백신 정보 팩트는?</span>
-                    </div>
+                <div class="button__direct">
+                    <a href="#" class="direct_icon">블</a>
+                    <span>블로그</span>
                 </div>
-
-                <!-- 제102주년 대한민국 임시정부 수립일 -->
-                <div>
-                    <a href="#">
-                        I-태 제102주년 대한민국 임시정부 수립일
-                    </a>
+                <div class="button__direct">
+                    <a href="#" class="direct_icon">...</a>
+                    <span></span>
                 </div>
-                
-                <!-- 애플리케이션 설치 광고 -->
-                <div>
-                    <span>I-N</span>
-                    <span>앱으로 새로운 네이버를 더 쾌적하게 사용해 보세요.</span>
-                    <button>앱 사용하기</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="main">
+        <!-- TODO: main은 어떤 식으로 나눌 수 있을까요? -->
+
+        <!-- 오늘 날씨 box -->
+        <div class="box today">
+            <div class="weather">
+                <span class="icon__weather">달</span>
+                <div class="weather_desc">
+                    <span>10&#176; 맑음</span>
+                    <span>어제보다 2&#176; 높아요</span>
                 </div>
+            </div>
+            <div class="now">
+                <a href="#">
+                    <span class="now">NOW.</span>
+                    <span class="broadcasting">지금 방송중</span>
+                </a>
+                <a href="#" class="channel">원1</a>
+                <a href="#" class="channel">원2</a>
+                <a href="#" class="channel">원3</a>
+            </div>
+        </div>
 
-                <!-- 웹툰 -->
-                <details>
-                    <summary>웹툰</summary>
-                    <div>내용 없음</div>
-                </details>
-
-                <!-- 인기 주제 판을 확인해 보세요! -->
+        <!-- 토글: 주간 날씨 -->
+        <details class="box weekly_weather">
+            <summary>
                 <div>
-                    <div>
-                        <span>인기 주제 판을  확인해 보세요!</span>
-                        <span>판관리</span>
-                    </div>
-                    <div>
-                        <div>
-                            I-필름
-                            <span>영화판</span>
-                        </div>
-                        <div>
-                            I-뿜
-                            <span>뿜판</span>
-                        </div>
-                        <div>
-                            I-웹툰
-                            <span>웹툰판</span>
-                        </div>
-                        <div>
-                            I-차트
-                            <span>경제M판</span>
-                        </div>
-                    </div>
+                    <h2>날씨</h2>
+                    <p>서울시 잠실동</p>
+                    <p>O</p>
                 </div>
-
-                <details>
-                    <summary>
-                        <span>알립니다</span>
-                        <span>네이버앱 업데이트 사전 안내</span>
-                    </summary>
-                    <div>
-                        내용 없음
-                    </div>
-                </details>
-		</section>
-
-		<footer>
-			<!-- TODO: 하단의 여러 가지 링크들은 어떻게 처리하면 좋을까요? -->
+            </summary>
 
             <div>
+                <div class="weather_type_buttons">
+                    <button class="button__weather">시간대별 날씨</button>
+                    <button class="button__weather">시간대별 미세먼지</button>
+                    <button class="button__weather">주간 날씨</button>
+                    <button class="button__weather">주간 미세먼지</button>
+                </div>
+                <div class="weathers">
+                    <div>
+                        <span>19&#176;</span>
+                        <span class="mid_line"></span>
+                        <span>8&#176;</span>
+                        <span class="icon__weather">해</span>
+                        <span>어제</span>
+                    </div>
+                    <div>
+                        <span>22&#176;</span>
+                        <span class="mid_line"></span>
+                        <span>7&#176;</span>
+                        <span class="icon__weather">해</span>
+                        <span>오늘</span>
+                    </div>
+                    <div>
+                        <span>17&#176;</span>
+                        <span class="mid_line"></span>
+                        <span>11&#176;</span>
+                        <span class="icon__weather">비</span>
+                        <span>월</span>
+                    </div>
+                    <div>
+                        <span>18&#176;</span>
+                        <span class="mid_line"></span>
+                        <span>12&#176;</span>
+                        <span class="icon__weather">비</span>
+                        <span>화</span>
+                    </div>
+                    <div>
+                        <span>17&#176;</span>
+                        <span class="mid_line"></span>
+                        <span>4&#176;</span>
+                        <span class="icon__weather">해</span>
+                        <span>수</span>
+                    </div>
+                    <div>
+                        <span>19&#176;</span>
+                        <span class="mid_line"></span>
+                        <span>4&#176;</span>
+                        <span class="icon__weather">해</span>
+                        <span>목</span>
+                    </div>
+                    <div>
+                        <span>19&#176;</span>
+                        <span class="mid_line"></span>
+                        <span>6&#176;</span>
+                        <span class="icon__weather">해</span>
+                        <span>금</span>
+                    </div>
+                    <div>
+                        <span>19&#176;</span>
+                        <span class="mid_line"></span>
+                        <span>8&#176;</span>
+                        <span class="icon__weather">해</span>
+                        <span>토</span>
+                    </div>
+                    <div>
+                        <span>18&#176;</span>
+                        <span class="mid_line"></span>
+                        <span>6&#176;</span>
+                        <span class="icon__weather">해</span>
+                        <span>일</span>
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <!-- 코로나 -->
+        <div class="box corona">
+            <div class="status">
                 <span>
+                    <span class="icon__circle">코</span>
+                    코로나19
+                </span>
+                <span>국내외 확진 현황</span>
+            </div>
+            <div class="fact">
+                <span>
+                    <span class="icon__circle">코</span>
+                    코로나19 팩트체크
+                </span>
+                <span>백신 정보 팩트는?</span>
+            </div>
+        </div>
+
+        <!-- 제102주년 대한민국 임시정부 수립일 -->
+        <div class="box event">
+            <a href="#">
+                제102주년 대한민국 임시정부 수립일
+            </a>
+        </div>
+
+        <!-- 애플리케이션 설치 광고 -->
+        <div class="box app_install">
+            <div>
+                <span class="icon__weather">N</span>
+                <span class="install_desc">앱으로 새로운 네이버를 더 쾌적하게 사용해 보세요.</span>
+            </div>
+            <button class="button_border">앱 사용하기</button>
+        </div>
+
+        <!-- 웹툰 -->
+        <details class="box webtoon">
+            <summary>
+                <h2>웹툰</h2>
+            </summary>
+            <div>내용 없음</div>
+        </details>
+
+        <!-- 인기 주제 판을 확인해 보세요! -->
+        <div class="box hot_pans">
+            <div class="title">
+                <h2>인기 주제 판을 확인해 보세요!</h2>
+                <span>판관리</span>
+            </div>
+            <div class="pans">
+                <div class="pan">
+                    <div>
+                        <span class="icon__circle">영</span>
+                        <span>영화판</span>
+                    </div>
+                    <span>></span>
+                </div>
+                <div class="pan">
+                    <div>
+                        <span class="icon__circle">뿜</span>
+                        <span>뿜판</span>
+                    </div>
+                    <span>></span>
+                </div>
+                <div class="pan">
+                    <div>
+                        <span class="icon__circle">웹</span>
+                        <span>웹툰판</span>
+                    </div>
+                    <span>></span>
+                </div>
+                <div class="pan">
+                    <div>
+                        <span class="icon__circle">경</span>
+                        <span>경제M판</span>
+                    </div>
+                    <span>></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 공지 사항 -->
+        <details class="box notice">
+            <summary>
+                <div>
+                    <span class="label__green">알립니다</span>
+                    <span>네이버앱 업데이트 사전 안내</span>
+                </div>
+            </summary>
+            <div> 
+                내용 없음
+            </div>
+        </details>
+    </section>
+
+    <footer>
+        <!-- TODO: 하단의 여러 가지 링크들은 어떻게 처리하면 좋을까요? -->
+
+        <div>
+            <ul>
+                <li>
                     <a href="#">로그인</a>
-                    |
+                </li>
+                |
+                <li>
                     <a href="#">전체서비스</a>
-                    |
+                </li>
+                |
+                <li>
                     <a href="#">PC버전</a>
-                </span>
-                <span>
+                </li>
+            </ul>
+            <ul>
+                <li>
                     <a href="#">이용약관</a>
-                    |
-                    <a href="#"><strong>개인정보처리방침</strong></a>
-                    |
+                </li>
+                |
+                <li>
+                    <a href="#" class="policy"><b>개인정보처리방침</b></a>
+                </li>
+                |
+                <li>
                     <a href="#">고객센터</a>
-                </span>
-            </div>
-            <a href="#">NAVER</a>
-		</footer>
-	</body>
+                </li>
+            </ul>
+        </div>
+        <a href="#">NAVER</a>
+    </footer>
+</body>
+
 </html>
